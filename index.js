@@ -19,13 +19,17 @@ app.use("/public", express.static(__dirname + "/public"));
 
 app.get('/',(req,res)=> {
     //res.send(`<h1>Hello From my Express Framework...<h1>`);
-    res.render('index'); 
+    res.render(`index`); 
 
+});
+
+app.get('/random',(req,res)=> {
+    res.render(`random`);
 });
 
 
 
-//start server
-const PORT= process.env.PORT||3000;
+//start server.
+const PORT= process.env.PORT||2000;
 app.listen(PORT,()=> 
 {console.log(`Server started on PORT NO. ${PORT}`)}); 
